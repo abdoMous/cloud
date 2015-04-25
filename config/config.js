@@ -9,7 +9,8 @@ var config = {
       name: 'express'
     },
     port: 3000,
-    db: 'mongodb://localhost/express-development'
+    //db: "mongodb://localhost/express-development"
+    db:"mongodb://admin:admin@ds037627.mongolab.com:37627/issue-tracker"
   },
 
   test: {
