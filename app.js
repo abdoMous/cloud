@@ -18,6 +18,6 @@ models.forEach(function (model) {
 var app = express();
 
 require('./config/express')(app, config);
-
-app.listen(config.port);
+console.log(config.hostname);
+app.listen(config.port,config.hostname);
 

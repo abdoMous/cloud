@@ -1,6 +1,6 @@
 var express = require('express');
 var glob = require('glob');
-
+var cors = require('cors');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -11,6 +11,7 @@ var methodOverride = require('method-override');
 module.exports = function(app, config) {
   app.set('views', config.root + '/app/views');
   app.set('view engine', 'ejs');
+  app.use(cors());
 
   var env = process.env.NODE_ENV || 'development';
   app.locals.ENV = env;
